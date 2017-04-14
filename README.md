@@ -8,8 +8,10 @@ Continuing to be the News Site app, we will focus on creating 1 new component, 2
 1. Before beginning this challenge, copy over `src/components/Article`, `src/Components/ArticleTeaser`, and `src/Components/Nav` from the `news-site` challenge from Day 4 into the `src/components` directory of this project.
 
 2. If you happened to change the name of the `Nav.js` (`src/components/Nav/Nav.js`) to a different name, you will need to update `App.js` and `Nav.test.js` in this new repo.
+
+3. Re-add react-bootstrap and bootstrap to this codebase using the instructions here:  https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap
  
-3. At the moment, the `<a>` links in your `ArticleTeaser` component append a hash/`#` to the URL when they're clicked.  This can cause a problem when handling route/url changes - let's modify the onClick event handler to alleviate this changing onClick to this:
+4. At the moment, the `<a>` links in your `ArticleTeaser` component append a hash/`#` to the URL when they're clicked.  This can cause a problem when handling route/url changes - let's modify the onClick event handler to alleviate this changing onClick to this:
 ```
 onClick={(event) => {
   event.preventDefault();
