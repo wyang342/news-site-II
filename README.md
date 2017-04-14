@@ -1,46 +1,47 @@
-```
+# News Site Part II
+
+
+## Initial Setup
+
 Continuing to be the News Site app, we will focus on creating 1 new component, 2 pages, and a routing system.
 
--------------------
+1. Before beginning this challenge, copy over `src/components/Article`, `src/Components/ArticleTeaser`, and `src/Components/Nav` from the `news-site` challenge from Day 4 into the `src/components` directory of this project.
 
-Initial Setup
-
-1a) Before beginning this challenge, copy over src/components/Article, src/Components/ArticleTeaser, and src/Components/Nav from the news-site challenge from Day 4 into the src/components directory of this project.  
-
-1b) If you happened to change the name of the Nav.js (src/components/Nav/Nav.js) to a different name, you will need to update App.js and Nav.test.js in this new repo.
+2. If you happened to change the name of the `Nav.js` (`src/components/Nav/Nav.js`) to a different name, you will need to update `App.js` and `Nav.test.js` in this new repo.
  
-2) At the moment, the <a> links in your ArticleTeaser component append a hash/# to the URL when they're clicked.  This can cause a problem when handling route/url changes - let's modify the onClick event handler to alleviate this changing onClick to this:
-
+3. At the moment, the `<a>` links in your `ArticleTeaser` component append a hash/`#` to the URL when they're clicked.  This can cause a problem when handling route/url changes - let's modify the onClick event handler to alleviate this changing onClick to this:
+```
 onClick={(event) => {
   event.preventDefault();
   this.props.handleTitleClick(this.props.id)
 }}
+```
+`event.preventDefault()` is the key line here - this will prevent the default behavior of the <a> tag.  This default behavior is what's responsible for adding this hash to the URL.
 
-event.preventDefault() is the key line here - this will prevent the default behavior of the <a> tag.  This default behavior is what's responsible for adding this hash to the URL.
 
--------------------
-
-Component I: ArticleList
+## Component I: ArticleList
 
 Like the components we created yesterday, the ArticleList component has been stubbed out - your mission is to create the content that the component should render, and handle the props that are being passed in appropriately. 
 
 The ArticleList component will receive an array of articles - it should map this array into an array of ArticleTeasers.  The ArticleTeaser component requires a handleTitleClick prop - the value that you provide for this should be the handleTitleClick prop that's passed into the ArticleList component.  In other words, ArticleList will receive this.props.handleTitleClick - you'll want to pass this.props.handleTitleClick as the value of the handleTitleClick prop on the ArticleTeaser components you create.
 
 Props:
-1) articles - an array of article objects
-2) handleTitleClick - a function
+1. articles - an array of article objects
+2. handleTitleClick - a function
 
--------------------
 
-React Router
+
+## React Router
 
 React Router is a popular open source library that's used to control paging in a single page app.  Using this library, you can load components based on URL paths.  For example, you can configure React Router to load ComponentX when the URL http://localhost:3000/componentx is requested.  Using React Router JSX, this would look something like this:
 
+```
 import ComponentX from './src/components/ComponentX/ComponentX.js';
 
 <BrowserRouter>
   <Route path="/componentx" component={ComponentX}
 </BrowserRouter>
+```
 
 To utilize React Router, install and save the react-router-dom library using npm:
 
