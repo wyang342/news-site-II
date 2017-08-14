@@ -2,17 +2,17 @@
 
 ## Initial Setup
 
-Each day of the News Site app will build on the previous day's code. Today, we are going to create 1 new component, 2 pages, and a routing system. A large majority of this code has already been written - we'll be moving quite a bit of code from one place to another.
+Each day of the News Site app will build on the previous day's code. Today, we are going to create 1 new component, 2 pages, and a routing system to build up News Site II. A large majority of this code has already been written for you either here or in the previous day's code. We'll be moving quite a bit of code from one place to another.
 
 1. Before beginning this challenge, copy over `src/components/Article`, `src/Components/ArticleTeaser`, and `src/Components/Nav` from the `news-site` challenge from Day 4 into the `src/components` directory of this project.
 
-2. If you happened to change the name of the `Nav.js` (`src/components/Nav/Nav.js`) to a different name (e.g., `AppNav.js` / `src/components/AppNav/AppNav.js`), you will need to update `App.js` and `Nav.test.js` in this new repo to account for the renaming of your `AppNav` component
+2. If you happened to change the name of the `Nav.js` (`src/components/Nav/Nav.js`) to a different name (e.g., `AppNav.js` / `src/components/AppNav/AppNav.js`), you will need to update `App.js` and `Nav.test.js` in this new repo to account for the renaming of your `AppNav` component. If you haven't renamed `Nav.js` to something else yet, you will by the end of the day because of React Bootstrap.
 
-3. Ensure that your code found in `App.js` from `news-site` is in `news-site-II`.
+3. Copy over `App.js` from `news-site` to `news-site-II`.
 
-4. Add `react-bootstrap` and `bootstrap` to this codebase using the instructions [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
+4. Add `react-bootstrap` to this codebase using the instructions [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
  
-5. At the moment, the `<a>` links in your `ArticleTeaser` component append a hash/`#` to the URL when they're clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
+5. At the moment, the `<a>` links in your `ArticleTeaser` component append a `#` to the URL when they're clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
 ```javascript
 onClick={(event) => {
   event.preventDefault();
@@ -30,15 +30,11 @@ Props for `ArticleList`:
 1. `articles` - an array of article objects
 2. `handleTitleClick` - a function
 
-The `ArticleList` `component` will receive an array of `articles`. `map` over this array and create an array of `ArticleTeaser`s. When you `map` over the `articles` array, it's good to pass in an arrow function to keep track of `this`. Don't use the regular function for this.
+The `ArticleList` `component` will receive an array of `articles`. `map` over this array and create an array of `ArticleTeaser`s. When you `map` over the `articles` array, it's good to pass in an arrow function to keep track of `this` - don't use regular functions.
 
-The `ArticleTeaser` `component` requires a `handleTitleClick` `prop` - the value that you provide for this should be the `handleTitleClick` `prop` that's passed into the `ArticleList` `component`.
+The `ArticleTeaser` `component` also requires a `handleTitleClick` `prop` - the value that you provide for this should be the `handleTitleClick` `prop` that's passed into the `ArticleList` `component`. In other words, `ArticleList` will receive `this.props.handleTitleClick`. This prop will be passed into your `ArticleTeaser` components that you create.
 
-In other words, `ArticleList` will receive `this.props.handleTitleClick`. This prop will be passed into your `ArticleTeaser` components that you create.
-
-Will we need to pass down anything else to render out `ArticleTeaser`? Think about it.
-
-Don't worry about this not doing anything yet. We'll wire it up in the next section.
+Will we need to pass down anything else to render out `ArticleTeaser`? Don't worry about this not doing anything yet. We'll wire it up in the next section.
 
 ## React Router
 
@@ -78,15 +74,13 @@ At this time, you may see a number of warnings and errors that appear because of
 
 Once the `HomePage` component is succesfully brought in, it's about 60% complete - once you've defined your route - and assuming you successfully built the `ArticleList` `component` in the step above - you should see a full list of articles at the `/` path (`http://localhost:3000/`).
 
-You also should be able to see the `ArticlePage` `component` (`src/pages/ArticlePage`) by navigating to `http://localhost:3000/article/1`. It should simply have the NavBar at the top and the words `Article Page` (boilerplate).
+You also should be able to see the `ArticlePage` `component` (`src/pages/ArticlePage`) by navigating to `http://localhost:3000/articles/1`. It should simply have the NavBar at the top and the words `Article Page` (boilerplate).
 
 If you are seeing the behavior above, you may continue to the next step. If not, ask your classmates or instructional staff for help.
 
 ## HomePage Component
 
-As mentioned above, the `HomePage` is largely complete - it simply renders the `ArticleList` `component`. The one piece of functionality you need to complete is the `handleTitleClick` function being passed into the `ArticleList` `component`. Ultimately, this function should trigger a page change. React Router is automatically passing a series of routing-related props to the `HomePage` `component`. One of these is `this.props.history`. You can trigger a page change by calling `this.props.history.push(NEWURL)`. You will also need to construct the argument being passed into `this.props.history.push()` - ultimately, this url should look something like this:
-
-`this.props.history.push(/articles/${articleID})`
+As mentioned above, the `HomePage` is largely complete - it simply renders the `ArticleList` `component`. The one piece of functionality you need to complete is the `handleTitleClick` function being passed into the `ArticleList` `component`. Ultimately, this function should trigger a page change. React Router automatically passes a series of routing-related props to the `HomePage` `component`. One of these is `this.props.history`. You can trigger a page change by calling `this.props.history.push(NEWURL)`. Ultimately, this url should look something like this: `this.props.history.push(/articles/${articleID})`
 
 `articleID` corresponds to the index of an item in the articles array, and is a parameter already being passed into this function. You should be able to click links in your homepage and be able to hit different urls that correspond with the article that you clicked.
 
@@ -100,6 +94,8 @@ Write the code necessary to find the news article and pass it into the `Article`
 - Byline
 - Image (this one will be a challenge!)
 - Abstract
+
+As of right now, keep in mind that people are able to actually hit `/articles/0`, which is not REST-ful - all IDs should start at 1. How can we alter the code to both get the correct article in the JSON file and be REST-ful?
 
 ## Style with Bootstrap
 
