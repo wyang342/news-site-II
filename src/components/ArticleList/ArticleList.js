@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ArticleTeaser from '../../components/ArticleTeaser/ArticleTeaser.js'
 
-class ArticleContainer extends Component {
+class ArticleList extends Component {
   render() {
     return (
       <div></div>
@@ -9,4 +9,4 @@ class ArticleContainer extends Component {
   }
 }
 
-export default ArticleContainer;
+export default ArticleList;
