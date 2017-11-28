@@ -92,8 +92,7 @@ Write the code necessary to find the news article and pass it into the `Article`
 - Title
 - Created Date
 - Byline
-- Image 
-  Note: This one will be a challenge. There will be some conditional logic required when handling articles with no image (see article 5).
+- Image (Note: This one will be a challenge. There will be some conditional logic required when handling articles with no image - see article 5)
 - Abstract
 
 As of right now, keep in mind that people are able to actually hit `/articles/0`, which is not REST-ful - all IDs should start at 1. How can we alter the code to both get the correct article in the JSON file and be REST-ful?
