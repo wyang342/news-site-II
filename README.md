@@ -4,15 +4,13 @@
 
 Each day of the News Site app will build on the previous day's code. Today, we are going to create 1 new component, 2 pages, and a routing system to build up News Site II. A large majority of this code has already been written for you either here or in the previous day's code. We'll be moving quite a bit of code from one place to another.
 
-1. Before beginning this challenge, copy over `src/components/Article`, `src/Components/ArticleTeaser`, and `src/Components/Nav` from the `news-site` challenge from Day 4 into the `src/components` directory of this project.
+1. Before beginning this challenge, copy over `src/components/Article`, `src/Components/ArticleTeaser`, and `src/Components/AppNav` from the `news-site` challenge from Day 4 into the `src/components` directory of this project.
 
-2. If you happened to change the name of the `Nav.js` (`src/components/Nav/Nav.js`) to a different name (e.g., `AppNav.js` / `src/components/AppNav/AppNav.js`), you will need to update `App.js` and `Nav.test.js` in this new repo to account for the renaming of your `AppNav` component. If you haven't renamed `Nav.js` to something else yet, you will by the end of the day because of React Bootstrap.
+2. Copy over `App.js` from `news-site` to `news-site-II`.
 
-3. Copy over `App.js` from `news-site` to `news-site-II`.
-
-4. Add `react-bootstrap` to this codebase using the instructions [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
+3. Add `react-bootstrap` to this codebase using the instructions [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
  
-5. At the moment, the `<a>` links in your `ArticleTeaser` component append a `#` to the URL when they're clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
+4. At the moment, the `<a>` links in your `ArticleTeaser` component append a `#` to the URL when they're clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
 ```javascript
 onClick={(event) => {
   event.preventDefault();
@@ -34,7 +32,7 @@ The `ArticleList` `component` will receive an array of `articles`. `map` over th
 
 The `ArticleTeaser` `component` also requires a `handleTitleClick` `prop` - the value that you provide for this should be the `handleTitleClick` `prop` that's passed into the `ArticleList` `component`. In other words, `ArticleList` will receive `this.props.handleTitleClick`. This prop will be passed into your `ArticleTeaser` components that you create.
 
-Will we need to pass down anything else to render out `ArticleTeaser`? Don't worry about this not doing anything yet. We'll wire it up in the next section.
+Will we need to pass down anything else to render out `ArticleTeaser`? Also, don't worry about this not doing anything yet - we will wire it up in the next section.
 
 ## React Router
 
@@ -68,7 +66,7 @@ In our app, we will have two routes in our `return`:
 </BrowserRouter>
 ```
 
-Keep the `Nav` component in the `return` as well - everything else can be removed. We'll come back to this soon.
+Keep the `AppNav` component in the `return` as well - everything else can be removed. We'll come back to this soon.
 
 At this time, you may see a number of warnings and errors that appear because of the old code you've copied over. Fix each one until the errors disappear. How do you bring in `HomePage` and `ArticlePage` (found in `src/pages/`)?
 
