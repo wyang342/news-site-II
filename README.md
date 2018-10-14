@@ -97,4 +97,4 @@ As of right now, keep in mind that people are able to actually hit `/articles/0`
 
 ## Style with Bootstrap
 
-Look into [this resource](https://react-bootstrap.github.io/components.html) to style everything using React Bootstrap! Let's make the Nav bar, the list of ArticleTeasers, and the Articles look nice.
+Look into [this resource](https://reactstrap.github.io/components/alerts/) to style everything using React Bootstrap! Let's make the Nav bar, the list of ArticleTeasers, and the Articles look nice.
