@@ -8,7 +8,7 @@ Each day of the News Site app will build on the previous day's code. Today, we a
 
 2. Copy over `App.js` from `news-site` to `news-site-II`.
 
-3. Add `react-bootstrap` to this codebase using the instructions [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
+3. Add `react-bootstrap` to this codebase using the instructions [here](https://react-bootstrap.github.io/getting-started/introduction). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
  
 4. At the moment, the `<a>` links in your `ArticleTeaser` component append a `#` to the URL when they're clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
 ```javascript
@@ -97,4 +97,4 @@ As of right now, keep in mind that people are able to actually hit `/articles/0`
 
 ## Style with Bootstrap
 
-Look into [this resource](https://reactstrap.github.io/components/alerts/) to style everything using React Bootstrap! Let's make the Nav bar, the list of ArticleTeasers, and the Articles look nice.
+Look into [this resource]https://reactstrap.github.io/components/navbar/) to style everything using React Bootstrap! Let's make the Nav bar, the list of ArticleTeasers, and the Articles look nice.
