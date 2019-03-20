@@ -8,7 +8,7 @@ Each day of the News Site app will build on the previous day's code. Today, we a
 
 2. Copy over `App.js` from `news-site` to `news-site-II`.
 
-3. Add `react-bootstrap` to this codebase using the instructions [here](https://react-bootstrap.github.io/getting-started/introduction). We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
+3. We are going to be adding some styling. There are many libraries out there but the one we are going to use is [reactstrap](https://reactstrap.github.io/). Reactstrap is a component library for React that uses Bootstrap styles under the hood. We need to install both `bootstrap` and `reactstrap`. Run `npm install bootstrap` and `npm install reactstrap`. Then, add this line `import 'bootstrap/dist/css/bootstrap.min.css'` to your `src/index.js`. We'll come back to style this app a bit later - at this point, your code should operate exactly like it did with `news-site`. Do not move forward unless it's the same.
  
 4. At the moment, the `<a>` links in your `ArticleTeaser` component append a `#` to the URL when they're clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
 ```javascript
