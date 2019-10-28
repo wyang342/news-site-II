@@ -27,13 +27,13 @@ onClick={(event) => {
 
 
 ## Component I: ArticleList
-We have a new component today that has been stubbed out: the `ArticleList` component. Your mission is to create the content that the component should render, and handle the `props` that are being passed in appropriately. 
+We have a new component today that has been stubbed out: the `ArticleList` component. Instead of showing a random article, we want our homepage to show a list of article teasers. Your mission is to handle the `props` that are being passed in appropriately and create the content that the component should render. 
 
 Props for `ArticleList`:
 1. `articles` - an array of article objects
 2. `handleTitleClick` - a function
 
-The `ArticleList` `component` will receive an array of `articles`. `map` over this array and create an array of `ArticleTeaser`s. When you `map` over the `articles` array, it's good to use arrow functions. Take a look at what your `ArticleTeaser` component requires (you may want to utilize the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)):
+The `ArticleList` component will receive an array of `articles` from the imported `News`. `map` over this array and create an array of `ArticleTeaser`s. When you `map` over the `articles` array, it's good to use arrow functions. Take a look at what your `ArticleTeaser` component requires (you may want to utilize the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)):
 - id (how can you use the indexes of the articles array to act as IDs?)
 - title
 - created_date
