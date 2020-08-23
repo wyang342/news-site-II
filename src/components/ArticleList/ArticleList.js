@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ArticleTeaser from '../../components/ArticleTeaser/ArticleTeaser.js'
+import ArticleTeaser from '../ArticleTeaser/ArticleTeaser.js'
 
 class ArticleList extends Component {
   render() {
