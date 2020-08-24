@@ -81,6 +81,8 @@ render() {
   );
 }
 ```
+Here we are wrapping our app in a `Router` and using `Route` components, which will look for an exact URL path match and render the compenent you specify for that path. Because we think of these components as different pages in our app, we've kept them in a `Pages` directory and named them accordingly.
+
 With this rewrite, we are no longer utilizing `this.state.article` or the imported `ArticleTeaser` and `Article` components in `App.js`. Go ahead and delete those imports and state instantiation.
 
 At this time, you may see a number of warnings and errors - how do you bring in `HomePage` and `ArticlePage` (found in `src/pages/`)?
