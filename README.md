@@ -20,7 +20,7 @@ $ npm install bootstrap
 $ npm install reactstrap
 ```
 
-4. If you're using reacstrap, add `import 'bootstrap/dist/css/bootstrap.min.css'` to your `src/index.js`. We'll come back to style this app a bit later - at this point, start up your new app. Your code should operate exactly like it did with `news-site-I`. **Do not move forward unless it's the same.**
+4. If you're using reactstrap, add `import 'bootstrap/dist/css/bootstrap.min.css'` to your `src/index.js`. We'll come back to style this app a bit later - at this point, start up your new app. Your code should operate exactly like it did with `news-site-I`. **Do not move forward unless it's the same.**
 
 5. At the moment, the `<a>` links in your `ArticleTeaser` component appends a `#` to the URL when clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
 ```javascript
