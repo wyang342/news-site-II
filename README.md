@@ -14,13 +14,13 @@ Your choice: for this challenge, we have provided the solutions to `news-site-i`
 
 3. Copy over the `App.js` from either this repo or your `news-site-I` into your new `news-site-II` project.
 
-4. Later today, we will be adding some styling. There are many libraries out there but the one we are going to use is [reactstrap](https://reactstrap.github.io/). Reactstrap is a component library for React that uses Bootstrap styles under the hood. We need to install both `bootstrap` and `reactstrap`.
+4. Later today, we will be adding some styling. There are many libraries out there but the one we are going to use is [reactstrap](https://reactstrap.github.io/) or [react bootstrap](https://react-bootstrap.github.io/). Reactstrap and React Bootsrap are component libraries for React that uses Bootstrap styles under the hood. For reactstrap we need to install both `bootstrap` and `reactstrap`. You can use either reactstrap or react bootstrap. 
 ```sh
 $ npm install bootstrap
 $ npm install reactstrap
 ```
 
-4. Add `import 'bootstrap/dist/css/bootstrap.min.css'` to your `src/index.js`. We'll come back to style this app a bit later - at this point, start up your new app. Your code should operate exactly like it did with `news-site-I`. **Do not move forward unless it's the same.**
+4. If you're using reacstrap, add `import 'bootstrap/dist/css/bootstrap.min.css'` to your `src/index.js`. We'll come back to style this app a bit later - at this point, start up your new app. Your code should operate exactly like it did with `news-site-I`. **Do not move forward unless it's the same.**
 
 5. At the moment, the `<a>` links in your `ArticleTeaser` component appends a `#` to the URL when clicked. This can cause a problem when handling route/url changes later today. Let's modify the `onClick` event handler to alleviate this changing `onClick` to this:
 ```javascript
