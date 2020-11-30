@@ -14,7 +14,7 @@ Your choice: for this challenge, we have provided the solutions to `news-site-i`
 
 3. Copy over the `App.js` from either this repo or your `news-site-I` into your new `news-site-II` project.
 
-4. Later today, we will be adding some styling. There are many libraries out there but the one we are going to use is [reactstrap](https://reactstrap.github.io/) or [react bootstrap](https://react-bootstrap.github.io/). Reactstrap and React Bootsrap are component libraries for React that uses Bootstrap styles under the hood. For reactstrap we need to install both `bootstrap` and `reactstrap`. You can use either reactstrap or react bootstrap. 
+4. Later today, we will be adding some styling. There are many libraries out there but the one we are going to use is [reactstrap](https://reactstrap.github.io/) or [react bootstrap](https://react-bootstrap.github.io/). Reactstrap and React Bootstrap are component libraries for React that uses Bootstrap styles under the hood. For reactstrap we need to install both `bootstrap` and `reactstrap`. You can use either reactstrap or react bootstrap. 
 ```sh
 $ npm install bootstrap
 $ npm install reactstrap
